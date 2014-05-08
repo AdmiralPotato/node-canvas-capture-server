@@ -27,7 +27,7 @@ npm install
 npm start
 ```
 
-After starting the server, navigate to `http://localhost:3000/` in your browser.
+After starting the server, navigate to `http://localhost:3000/` in your browser. At this point, if you wish to skip most of the following usage instructions, you will find some super minimal and functional examples of how to do all of this in the `public` folder, in the files named `demo.html` and `javascripts/demo.js`.
 
 
 1: Put your all files you intend to access into the `public` folder. Create an HTML file to host your Canvas element. Put a `<canvas>` tag on that page.
@@ -45,7 +45,7 @@ After starting the server, navigate to `http://localhost:3000/` in your browser.
 ```
 
 
-3: AFTER the the Get access to your `<canvas>` tag in JavaScript, and pass it to the `CanvasCapture` constructor to create a new instance of the `CanvasCapture` object.
+3: Somewhere AFTER you have placed the `jQuery` and `capture.js` script tags, get access to the `<canvas>` tag via your own JavaScript, and pass it to the `CanvasCapture` constructor to create a new instance of the `CanvasCapture` object.
 
 ```javascript
 var myCanvasElement = document.getElementById('myCanvas');
@@ -53,7 +53,7 @@ var myCanvasCapture = new CanvasCapture(myCanvasElement);
 ```
 
 
-4: Do whatever you feel like with the contents of your canvas. When you are happy with the content of a frame, call the `CanvasCapture.capture` method.
+4: Do whatever you feel like with the contents of your canvas. When you are happy with the content of a frame, call the `CanvasCapture.capture()` method.
 
 ```javascript
 //did my rendering, canvas now has some content
@@ -61,7 +61,7 @@ myCanvasCapture.capture();
 ```
 
 
-5: When you have captured all of the frames you want included in your animation, stop whatever loop you have which was capturing your frames, and call the `CanvasCapture.send` method, with the a string argument describing the path that you want your PNGs saved out to.
+5: When you have captured all of the frames you want included in your animation, stop whatever loop you have which was capturing your frames, and call the `CanvasCapture.send(pathName)` method, with the a string argument describing the path that you want your PNGs saved out to.
 
 ```javascript
 //whatever loop was capturing frames should have been stopped by now
