@@ -46,6 +46,8 @@ var myCanvas = document.getElementById("outputCanvas"),
 		ctx.fillRect(0,0,w,h);
 		ctx.translate(cx, cy);
 
+		ctx.rotate(deg * 90);
+
 		position[0] = cos(frame * 10 * deg) * -radius;
 		position[1] = sin(frame * 10 * deg) * radius;
 
@@ -97,7 +99,7 @@ var myCanvasCapture = new CanvasCapture(myCanvas),
 				clearInterval(interval);
 				//When you are done capturing all of the frames in the animation,
 				//this function sends them all to the server in one large lump.
-				myCanvasCapture.send('index_output_0');
+				myCanvasCapture.send('demo_output_0');
 			}
 		}
 	},
