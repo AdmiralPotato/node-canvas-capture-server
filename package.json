@@ -1,0 +1,37 @@
+{
+  "name": "node-canvas-capture-server",
+  "version": "0.0.1",
+  "private": false,
+  "scripts": {
+    "start": "node ./bin/www",
+    "install": "node install"
+  },
+  "dependencies": {
+    "debug": "~0.7.4",
+    "mkdirp": "~0.5.0",
+    "rmdir-recursive": "~0.0.0",
+    "express": "~4.0.0",
+    "serve-index": "~1.0.2",
+    "body-parser": "~1.0.0"
+  },
+  "description": "node-canvas-capture-server",
+  "main": "./bin/www",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AdmiralPotato/node-canvas-capture-server.git"
+  },
+  "keywords": [
+    "html5",
+    "canvas",
+    "canvas2d",
+    "webgl",
+    "node"
+  ],
+  "author": "Admiral Potato",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AdmiralPotato/node-canvas-capture-server/issues"
+  },
+  "homepage": "https://github.com/AdmiralPotato/node-canvas-capture-server"
+}

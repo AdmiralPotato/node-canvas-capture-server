@@ -1,0 +1,7 @@
+This is the directory where your image sets will be output. For example, if you run:
+
+myCanvasCaptureInstance.send('cap-1');
+
+then your images will be placed in:
+
+/output/cap-1/(0001 - 9999).png
