@@ -92,7 +92,7 @@ var myCanvasCapture = new CanvasCapture(myCanvas),
 		if(exportMode){
 			//I start capturing at a later frame in this design because it needs to build up the canvas
 			//content before I start capture so that the output animation will loop well.
-			if(frame > 36 && frame < 72){
+			if(frame > 36 && frame <= 72){
 				//Any time you have a frame rendered and ready for capture, use this.
 				myCanvasCapture.capture();
 			} else if(frame >= 72) {
