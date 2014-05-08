@@ -71,4 +71,4 @@ myCanvasCapture.send('cap-1');
 The above will save your PNGs into a structure looking like this: `/output/cap-1/(0001 - 9999).png`
 
 
-6: Wait. Depending on the size of the size and number of frames you sent to the server, the operation may take some time to save all those files to the file system. If the save succeeded, an `alert` dialog will appear and display the path at which you may access your PNG output. Happy exporting!
+6: Wait. Depending on the size and number of frames you sent to the server, the server may take some time to save all those files to the file system. If the save succeeded, an `alert` dialog will appear and display the path at which you may access your PNG output. Happy exporting!
