@@ -15,15 +15,21 @@ CanvasCapture.prototype = {
 	},
 	send: function(path){
 		var t = this;
-		$.post(
-			'/capture',
-			{
+		$.ajax({
+			method: 'post',
+			url: '/capture',
+			data: {
 				frameList: t.frameList,
 				path: path || '0'
 			},
-			function(reply){
+			success: function (reply) {
 				alert(reply);
+			},
+			error: function (reply) {
+				var intermediateElement = document.createElement('span');
+				intermediateElement.innerHTML = reply.responseText.split('\n').shift();
+				alert(intermediateElement.innerText);
 			}
-		);
+		});
 	}
 };

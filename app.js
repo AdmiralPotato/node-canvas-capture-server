@@ -13,7 +13,6 @@ var express = require('express'),
 
 
 app.use(bodyParser.urlencoded({limit: '500mb'}));
-
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(directory(path.join(__dirname, 'public')));
 
@@ -65,14 +64,10 @@ app.post('/capture', function(req, res, next){
 	}
 });
 
-/// catch 404 and forwarding to error handler
-app.use(function(err, req, res, next) {
-	console.log(err);
-	if(!err){
-		err = new Error('Not Found');
-		err.status = 404;
-	}
-	next(err);
+/// handle 404s
+app.use(function(req, res) {
+	res.status(404);
+	res.send('Not Found');
 });
 
 app.use(function(err, req, res) {
